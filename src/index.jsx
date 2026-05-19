@@ -1,7 +1,7 @@
 /**
  * Iframe Player - Index Factory
  */
-async function View({ folderPath, dc }) {
+async function View({ folderPath, dc, initialUrl = "https://www.youtube.com/embed/bsL7ZnKIAhs" }) {
   const Agent = {
     timer: null,
     start: (fPath, onReload) => {
@@ -45,14 +45,11 @@ async function View({ folderPath, dc }) {
           const base = folderPath;
           const [
             playerModule,
-            appModule
           ] = await Promise.all([
             dc.require(base + "/src/components/IframePlayer.jsx"),
-            dc.require(base + "/src/App.jsx")
           ]);
           setModules({
             IframePlayer: playerModule,
-            WorldView: appModule.WorldView
           });
         } catch (e) {
           setError(e);
@@ -77,10 +74,11 @@ async function View({ folderPath, dc }) {
       );
     }
 
-    const { WorldView, IframePlayer } = modules;
+    const { IframePlayer } = modules;
+    const { View: PlayerView } = IframePlayer;
     return (
       <div id="datacore-component-root" style={{ width: "100%", height: "100%" }}>
-        <WorldView folderPath={folderPath} dc={dc} IframePlayer={IframePlayer} />
+        <PlayerView initialUrl={initialUrl} />
       </div>
     );
   };

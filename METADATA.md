@@ -3,6 +3,7 @@ id: iframe-player
 name: IFRAME PLAYER
 description: A smart, responsive media player component that automatically applies optimized styling and embed logic for various social media platforms.
 author: beto.group
+contributor: ""
 version: 2.0.2
 status: stable
 complexity: plug-n-play
@@ -28,7 +29,6 @@ network: External
 runtime: PureJS
 entry_point: IFRAME PLAYER.md
 logic: src/index.jsx
-contributors: []
 ---
 
 This file contains the machine-readable packaging manifest and indexing properties for this component.
