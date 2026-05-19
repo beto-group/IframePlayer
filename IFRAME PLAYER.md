@@ -31,5 +31,5 @@ version: 2.0.2
 const activeFile = dc.resolvePath("IFRAME PLAYER") || "_RESOURCES/DATACORE/IFRAME PLAYER/IFRAME PLAYER";
 const folderPath = activeFile.substring(0, activeFile.lastIndexOf('/'));
 const { View } = await dc.require(folderPath + "/src/index.jsx");
-return <View folderPath={folderPath} dc={dc} initialUrl="https://www.youtube.com/embed/bsL7ZnKIAhs" />;
+return await View({ folderPath, dc, initialUrl: "https://www.youtube.com/embed/bsL7ZnKIAhs" });
 ```
