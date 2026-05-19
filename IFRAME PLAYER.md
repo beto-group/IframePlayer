@@ -14,7 +14,7 @@ tags:
 desc: A smart, responsive media player component that automatically applies optimized styling and embed logic for various social media platforms.
 status: stable
 complexity: plug-n-play
-id: iframe-player
+id: iframe-player-888
 resources:
   - assets/iframe_player.webp
   - assets/iframeplayer.clip.gif
