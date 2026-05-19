@@ -1,5 +1,5 @@
 ---
-id: iframe-player-888
+id: iframe-player-371842
 name: IFRAME PLAYER
 description: A smart, responsive media player component that automatically applies optimized styling and embed logic for various social media platforms.
 author: beto.group
